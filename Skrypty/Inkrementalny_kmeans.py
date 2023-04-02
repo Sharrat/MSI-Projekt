@@ -1,3 +1,33 @@
+'''Opis kodu:
+
+- Importujemy moduły NumPy i BaseEstimator oraz ClassifierMixin z modułu sklearn.
+- Tworzymy klasę IncrementalKmeans, która dziedziczy po klasach BaseEstimator oraz ClassifierMixin.
+    Klasa ta implementuje algorytm k-means w wersji "inkrementalnej",
+    która pozwala na aktualizowanie wyników w miarę pojawiania się nowych danych.
+- W metodzie __init__ ustawiamy wartości domyślne dla parametrów k, init oraz random_state.
+    Ponadto tworzymy atrybuty centroidy, liczniki oraz klasy,
+    które w późniejszym czasie będą przechowywać wartości dotyczące klastrów.
+- Metoda predict przyjmuje macierz X i przypisuje każdy punkt do
+    najbliższego klastra na podstawie obliczonych wcześniej wartości centroidów.
+    Następnie zwraca przypisania klastrów.
+- Metoda partial_fit przyjmuje macierz X, wektor y oraz wartość classes (która może być None).
+    W metodzie tej dokonujemy inicjalizacji centroidów (jeśli jeszcze nie zostały zainicjalizowane)
+    oraz aktualizujemy klasy. Następnie dokonujemy przypisania punktów do najbliższych klastrów i
+    aktualizujemy centra klastrów.
+- Metoda _przypisz_klastry oblicza odległości od każdego punktu do każdego centrum klastra.
+    Następnie przypisuje każdy punkt do najbliższego centroida i zwraca przypisania klastrów.
+- Metoda _aktualizuj_centra aktualizuje centra klastrów jako średnią punktów w klastrze.
+    Najpierw iterujemy po każdym klastrze i tworzymy maskę, która pozwoli na wyodrębnienie punktów przypisanych
+    do danego klastra. Następnie obliczamy średnią punktów i aktualizujemy wartości centroidów oraz liczników.
+- Metoda _inicjalizacja_kpp implementuje algorytm k-means++ w
+    celu wygenerowania początkowych centroidów dla klastrów. Najpierw losujemy pierwszy centroid.
+    Następnie iterujemy po pozostałych klastrach (k-1) i obliczamy minimalne odległości od każdego
+    punktu do najbliższego centroidu. Następnie obliczamy wartość p dla każdego punktu,
+    która jest stosunkiem kwadratu odległości punktu od najbliższego centroidu do sumy kwadratów
+    odległości wszystkich punktów od ich najbliższych centroidów. Na podstawie wartości p losujemy
+    kolejny centroid z wagami określonymi przez wartości p. Ostatecznie zwracamy wygenerowane centroidy.
+'''
+
 import numpy
 from sklearn.base import BaseEstimator, ClassifierMixin
 class IncrementalKmeans(BaseEstimator, ClassifierMixin):
