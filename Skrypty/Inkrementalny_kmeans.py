@@ -1,10 +1,8 @@
 import numpy
 from sklearn.base import BaseEstimator, ClassifierMixin
 class IncrementalKmeans(BaseEstimator, ClassifierMixin):
-    def __init__(self, k=2,max_iter=100,init='k-means++', random_state=None, batch=100):
+    def __init__(self, k=2, init='k-means++', random_state=None):
         self.k=k # liczba klastrów którą chcemy uzyskać
-        self.max_iter = max_iter # Maksymalna liczba iteracji algorytmu
-        self.batch = batch # Rozmiar jednej partii dla uczenia dla streamów
         self.init = init #metoda inicjalizacji centroidów
         self.random_state = random_state # Wybór stanu losowego w celu zapewnienia mechanizmu reprodukowalności wyników
         self.centroidy = None #Miejsce na centroidy
