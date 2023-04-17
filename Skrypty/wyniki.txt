@@ -1,0 +1,18 @@
+------------------------------------------------------------------------------------------
+TEST T-STUDENTA : Incremental - mini-batch
+adjusted_rand_score: t = -0.3028303621265055, p = 0.7628464753761512
+normalized_mutual_info_score: t = -0.5889284308103555, p = 0.5576557338815316
+------------------------------------------------------------------------------------------
+TEST T-STUDENTA : Incremental - Birch
+adjusted_rand_score: t = 5.2717016368748055, p = 1.2274440421236494e-06
+normalized_mutual_info_score: t = 5.381524749739373, p = 7.907211320054754e-07
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+TEST Wilcoxon Signed-Rank Test: Incremental - mini-batch
+adjusted_rand_score: statistic = 363.0, p-value = 0.7145455725258216
+normalized_mutual_info_score: statistic = 356.0, p-value = 0.643712874083576
+------------------------------------------------------------------------------------------
+TEST Wilcoxon Signed-Rank Test: Incremental - Birch
+adjusted_rand_score: statistic = 39.0, p-value = 2.759043127298355e-08
+normalized_mutual_info_score: statistic = 36.0, p-value = 1.8109858501702547e-08
+------------------------------------------------------------------------------------------
