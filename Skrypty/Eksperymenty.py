@@ -54,7 +54,14 @@ ScoresBirch = ewaluator.scores
 #Zapisanie wynikow do pliku
 f = open("wyniki.txt", 'w')
 sys.stdout = f
-
+print("Wyniki metryk:")
+print("Dla algorytmu incremental kMeans:")
+print(ScoresIncremental)
+print("Dla algorytmu mini batch kmeans:")
+print(ScoresMiniBatch)
+print("Dla algorytmu birch:")
+print(ScoresBirch)
+print("Wyniki testów statystycznych:")
 #-----------------------------T-Test---------------------------------------#
 print("------------------------------------------------------------------------------------------")
 print("TEST T-STUDENTA : Incremental - mini-batch")
@@ -153,7 +160,14 @@ ScoresBirch = ewaluator.scores
 #Zapisanie wynikow do pliku
 f = open("wyniki2.txt", 'w')
 sys.stdout = f
-
+print("Wyniki metryk:")
+print("Dla algorytmu incremental kMeans:")
+print(ScoresIncremental)
+print("Dla algorytmu mini batch kmeans:")
+print(ScoresMiniBatch)
+print("Dla algorytmu birch:")
+print(ScoresBirch)
+print("Wyniki testów statystycznych:")
 #-----------------------------T-Test---------------------------------------#
 print("------------------------------------------------------------------------------------------")
 print("TEST T-STUDENTA : Incremental - mini-batch")
