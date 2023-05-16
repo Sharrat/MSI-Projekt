@@ -32,6 +32,9 @@ Dla algorytmu incremental kMeans:
   [ 0.20177384  0.3685385 ]
   [-0.02739726  0.19473643]
   [ 0.23728814  0.47206971]]]
+Odchylenie standardowe dla Incremental kMeans dla poszczególnych metryk:
+adjusted_rand_score: 0.1726002669719808
+normalized_mutual_info_score: 0.16591545952912945
 Dla algorytmu mini batch kmeans:
 [[[-0.02272727  0.4369725 ]
   [ 0.33962264  0.60983184]
@@ -65,6 +68,9 @@ Dla algorytmu mini batch kmeans:
   [-0.07913669  0.32313017]
   [ 0.00221729  0.28105289]
   [ 0.19642857  0.40067624]]]
+Odchylenie standardowe dla Mini Batch dla poszczególnych metryk:
+adjusted_rand_score: 0.1670252818612241
+normalized_mutual_info_score: 0.14149729538597972
 Dla algorytmu birch:
 [[[ 0.09090909  0.55181958]
   [ 0.13897281  0.24484198]
@@ -98,6 +104,9 @@ Dla algorytmu birch:
   [ 0.04624277  0.33447799]
   [-0.05882353  0.3027217 ]
   [ 0.28429423  0.44228461]]]
+Odchylenie standardowe dla Birch dla poszczególnych metryk:
+adjusted_rand_score: 0.19297663816576724
+normalized_mutual_info_score: 0.1777707667752968
 Wyniki testów statystycznych:
 ------------------------------------------------------------------------------------------
 TEST T-STUDENTA : Incremental - mini-batch

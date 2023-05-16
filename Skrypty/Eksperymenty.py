@@ -1,3 +1,4 @@
+import numpy as np
 from sklearn.metrics import adjusted_rand_score
 import matplotlib.pyplot as plt
 from strlearn.streams import StreamGenerator
@@ -57,10 +58,19 @@ sys.stdout = f
 print("Wyniki metryk:")
 print("Dla algorytmu incremental kMeans:")
 print(ScoresIncremental)
+print("Odchylenie standardowe dla Incremental kMeans dla poszczególnych metryk:")
+for m, metryka in enumerate(metryki):
+    print(f"{metryka.__name__}:", np.std(ScoresIncremental[0, :, m]))
 print("Dla algorytmu mini batch kmeans:")
 print(ScoresMiniBatch)
+print("Odchylenie standardowe dla Mini Batch dla poszczególnych metryk:")
+for m, metryka in enumerate(metryki):
+    print(f"{metryka.__name__}:", np.std(ScoresMiniBatch[0, :, m]))
 print("Dla algorytmu birch:")
 print(ScoresBirch)
+print("Odchylenie standardowe dla Birch dla poszczególnych metryk:")
+for m, metryka in enumerate(metryki):
+    print(f"{metryka.__name__}:", np.std(ScoresBirch[0, :, m]))
 print("Wyniki testów statystycznych:")
 #-----------------------------T-Test---------------------------------------#
 print("------------------------------------------------------------------------------------------")
@@ -163,10 +173,19 @@ sys.stdout = f
 print("Wyniki metryk:")
 print("Dla algorytmu incremental kMeans:")
 print(ScoresIncremental)
+print("Odchylenie standardowe dla Incremental kMeans dla poszczególnych metryk:")
+for m, metryka in enumerate(metryki):
+    print(f"{metryka.__name__}:", np.std(ScoresIncremental[0, :, m]))
 print("Dla algorytmu mini batch kmeans:")
 print(ScoresMiniBatch)
+print("Odchylenie standardowe dla Mini Batch dla poszczególnych metryk:")
+for m, metryka in enumerate(metryki):
+    print(f"{metryka.__name__}:", np.std(ScoresMiniBatch[0, :, m]))
 print("Dla algorytmu birch:")
 print(ScoresBirch)
+print("Odchylenie standardowe dla Birch dla poszczególnych metryk:")
+for m, metryka in enumerate(metryki):
+    print(f"{metryka.__name__}:", np.std(ScoresBirch[0, :, m]))
 print("Wyniki testów statystycznych:")
 #-----------------------------T-Test---------------------------------------#
 print("------------------------------------------------------------------------------------------")
